@@ -1,0 +1,99 @@
+<div class="header" id="home">
+	<div class="container">
+		<ul>
+        <li> <a href="#" routerLink="/login" data-toggle="modal" data-target="#myModal" *ngIf="!session_set"><i aria-hidden="true"></i> Sign In </a><a href="#" routerLink="/login" data-toggle="modal" data-target="#myModal" *ngIf="session_set" (click)="logout()"><i aria-hidden="true"></i> Logout </a></li>
+			<li> <a href="#" routerLink="/register" data-toggle="modal" data-target="#myModal2"><i aria-hidden="true"></i> Sign Up </a></li>
+			<li><i aria-hidden="true"></i> Call : 01234567898</li>
+			<li><i aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="row">
+<div class="col-md-4">
+
+</div>
+
+<div class="col-md-4 logo_agile">
+  <a class="navbar-brand title" routerLink="/main">
+  <img style="margin-top:10px;"width="80px" src="assets/e_logo.jpg" alt="">
+<span style="color:black;"><i style="font-size:50px;"><b>Dime</b></i></span><span style="font-size:40px ;color:black;">shoppy</span>
+</a>
+</div>
+
+<div class="col-md-4">
+  <form class="form-inline my-4 my-lg">
+    <input class="form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+    <img width="50px" src="https://img.icons8.com/bubbles/50/000000/google-web-search.png"/>
+    
+    <!-- <button class="btn btn-outline-warning my-2 my-lg-0" type="submit">Search</button> -->
+  </form>
+</div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light  shadow-lg p-3 mb-5 bg-info rounded">
+ <div>
+  <div class="row">
+    <div class="col-md-6">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" >
+          
+          <a class="nav-link dropdown-toggle" *ngIf="session_set" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Hello, {{username}}</a>
+          <div class="dropdown-menu" *ngIf="session_set" aria-labelledby="navbarDropdown">
+            <a routerLink="/myaccount" class="dropdown-item" href="#">Your account</a>
+            <a routerLink="/editprofile" class="dropdown-item" href="#">Edit Profile</a>
+            <a routerLink="/wishlist" class="dropdown-item" href="#">Your wishlist</a>
+            <a routerLink="/order" class="dropdown-item" href="#">Your order</a>
+            
+          </div>
+        </li>
+        
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/main" href="#">Home <span class="sr-only">(current)</span></a>
+        </li> 
+        <li class="nav-item">
+          <a routerLink="/contact" class="nav-link" href="#">Contact</a>
+        </li>  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Men's
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" *ngFor="let c of subcat1">{{c.name}}</a>
+          
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Women's
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" *ngFor="let a of subcat2">{{a.name}}</a>
+          
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Kid's
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#" *ngFor="let t of subcat3">{{t.name}}</a>
+          
+          </div>
+        </li>
+          <div class="col-md-4"></div>
+          <div class="col-md-2 ml-auto">
+          <a routerLink="/cart" href="#"><img src="https://img.icons8.com/bubbles/50/000000/buy.png"/></a>  
+          </div>
+         
+      </ul>
+      
+      </div>
+    </div>
+    </div>
+  </div>
+  </nav> 
+ 
+
+  

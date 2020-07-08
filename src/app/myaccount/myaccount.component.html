@@ -1,0 +1,67 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" *ngIf="session_set">
+	<div class="row">
+		<div class="col-md-3 ">
+		     <div class="list-group ">
+              <a routerLink="/myaccount" class="list-group-item list-group-item-action active">Profile</a>
+              <a routerLink="/editprofile" href="#" class="list-group-item list-group-item-action">Edit Profile</a>
+              <a routerLink="/order" class="list-group-item list-group-item-action">Orders</a>
+              <a href="#" class="list-group-item list-group-item-action">Enquiry</a>
+              <a href="#" class="list-group-item list-group-item-action">Dealer</a>
+              <a href="#" class="list-group-item list-group-item-action">Media</a>
+              <a href="#" class="list-group-item list-group-item-action">Post</a>
+              <a href="#" class="list-group-item list-group-item-action">Category</a>
+              <a href="#" class="list-group-item list-group-item-action">New</a>
+              <a href="#" class="list-group-item list-group-item-action">Comments</a>
+              <a href="#" class="list-group-item list-group-item-action">Appearance</a>
+              <a href="#" class="list-group-item list-group-item-action">Reports</a>
+              <a href="#" class="list-group-item list-group-item-action">Settings</a>
+              
+              
+            </div> 
+		</div>
+		<div class="col-md-9">
+		    <div class="card card-b">
+		        <div class="card-body">
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <h4>Your Profile</h4>
+		                    <hr>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="col-md-12">
+		                    <div class="card" style="width: 18rem;">
+                                <div class="card-body card">
+                                  
+                                <p class="card-subtitle mb-2 text-muted">
+                                
+                                Mobile No :             {{contact}}
+                                <br>
+                                <br>
+                                Full Name :             {{username}}
+                                <br>
+                                <br>
+                                Email-id  :             {{email}}
+                                <br>
+                                <br>
+                        
+                                </p>
+                                  
+                                <button type="button" routerLink="/editprofile" class="btn btn-dark b">Edit Profile</button>
+                                </div>
+                                
+                              </div>
+		                </div>
+		            </div>
+                        </div>
+                        
+               
+		    </div>
+		</div>
+	</div>
+</div>

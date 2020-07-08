@@ -1,0 +1,76 @@
+<div class="row">
+   <div class="col-lg-4 text-center">
+   <img class="details" width="400px" height="400px" src="http://localhost:3005/{{products.productImagePath}}">
+   </div>
+
+   <div class="col-lg-4 ">
+       
+       <h4 class=" shadow-lg p-3 mb-5 bg-info rounded border-dark">Product details</h4>
+       
+       <h5>Name : {{products.name}}
+       </h5>
+       <hr>
+       <h5>Price: Rs.{{products.price}}</h5>
+       <hr>
+       <h5>Category :{{products.category.name}}</h5>
+       <hr>
+       <h5>Size:</h5>
+     <span>
+       <select name="" id="">
+           <option value="">S</option>
+           <option value="">XS</option>
+           <option value="">M</option>
+           <option value="">L</option>
+           <option value="">XL</option>
+       </select>
+     </span>
+     <hr>
+       <p>Description:{{products.description}}</p>
+       <hr>
+       <h5>
+           Select Qty:
+       </h5>
+       <span>
+           <select name="" id=""#ingre_qty>
+               <option value="">1</option>
+               <option value="">2</option>
+               <option value="">3</option>
+               <option value="">4</option>
+               <option value="">5</option>
+           </select>
+       </span>
+       <hr>
+        <button (click)="addTocart()" routerLink="/cart" class="btn btn-warning text-light"> 
+           Add to Cart  
+      </button>
+       
+   </div>
+
+
+ <div class="col-lg-1">
+
+ </div>
+
+   <div class="col-lg-3">
+       <div class="card border-dark mb-3" style="max-width: 18rem;">
+           <div class="card-header bg-transparent border-dark"><button routerLink="/wishlist" class="btn btn-dark btn-lg btn-block text-light"> 
+           Add to wishlist
+         </button>
+         <br>
+         <br>
+         <button class="btn btn-dark btn-lg btn-block text-light"> 
+           Buy now 
+      </button> 
+       </div>
+           <div class="card-body text-danger">
+             <h5 class="card-title">Save Extra with 4 offers</h5>
+             <p class="card-text"><b>Bank offer:</b>10% instant discount</p>
+           </div>
+           <div class="card-footer bg-transparent border-success">Free shipping</div>
+         </div>
+   </div>
+   </div>
+
+<br>
+<br>
+   

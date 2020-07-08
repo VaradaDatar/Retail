@@ -1,0 +1,14 @@
+.card{
+
+    height: 500px;
+    width: 500px;
+    font-size: large;
+}
+
+b{
+    color: white;
+}
+.card-b{
+    height: 700px;
+    width: 700px;
+}
